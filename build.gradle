@@ -18,9 +18,14 @@ version = mod_version
 group = mod_group_id
 
 repositories {
-    // Add here additional repositories if required by some of the dependencies below.
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
 }
-
+dependencies {
+    implementation files('libs/PMWeatherAPI-1.20.1-1.0.1.jar')
+}
 base {
     archivesName = mod_id
 }
